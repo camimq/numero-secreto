@@ -80,3 +80,67 @@ O GitHub é a **plataforma de hospedagem** na nuvem que **utiliza o Git**. Ele f
 Pense no **Git** como o seu **processador de texto** (como o Microsoft Word), onde você escreve e edita seu arquivo localmente. O **GitHub** seria como o **Google Drive** ou **Dropbox**, onde você envia esse arquivo para que outras pessoas vejam, comentem e ajudem a editar.
 
 > **Dica:** você náo precisa do GitHub para usar o Git, mas o GitHub torna o uso do Git muito mais poderoso para o trabalho em equipe e para construir o seu portfólio profissional.
+
+## Mensagens de commits
+
+Apesar de não existir uma regra universal para a escrita das mensagens de commit, algumas boas práticas podem ser seguidas para garantir que outras pessoas, e até mesmo você no futuro, entendam que alterações foram feitas e por quê.
+As mensagens dos commits devem ser simples e objetivas. A seguir, listamos algumas orientações para isso:
+
+- **Mantenha a mensagem curta e concisa:** A primeira linha da mensagem deve conter, no máximo, 72 caracteres. Caso seja necessário uma descrição adicional, você deve pular uma linha e adicionar os detalhes, como o contexto, da mudança realizada.
+- **Uso de verbo no infinitivo:** É comum que a mensagem do commit inicie com um verbo no infinitivo que descreva a alteração feita, como “adicionar”, “corrigir” ou “atualizar”. Em sequência, são adicionados detalhes concisos da mudança. Por exemplo: “Atualizar texto do título da página”.
+- **Evite detalhes técnicos:** Não inclua detalhes técnicos complexos na mensagem de commit. Esses detalhes podem ser adicionados nos comentários de código ou na documentação.
+
+É importante ter em mente que a mensagem do commit é uma forma de documentação do histórico das mudanças que ocorreram ao longo do código. A pessoa que ler essa mensagem pode não ter conhecimento do contexto original. Assim, garanta que suas mensagens de commit tenham clareza e sejam suficientemente descritivas.
+
+## Quando realizar um commit?
+
+Um commit deve ser realizado sempre que você **finalizar uma tarefa** específica ou resolver algum bug. Isso mantém o histórico de commits claro e rastreável, de modo que seja possível entender o que foi feito em cada commit.
+Assim, é importante realizar commits frequentemente. Porém, evite realizar commits muito pequenos ou muito grandes, pois isso pode tornar difícil o seu entendimento.
+
+Lembre-se de **nunca realizar um commit de um código que você sabe que contém bugs**. O ideal é que o commit contenha somente código funcional.
+
+## Como o Git controla as mudanças?
+
+O controle de mudanças do Git é feito através dos **commits**. Cada commit armazena o **estado completo** do projeto em um determinado momento por meio de um **snapshot**. Ou seja, cada commit é um registro completo do repositório no momento em que esse commit foi criado.
+Como cada commit é uma representação completa e consistente do estado do projeto em um determinado ponto no tempo, isso facilita a rastreabilidade e o entendimento de como se deu a evolução do código ao longo do tempo.
+
+Todo commit conta com um id único e traz uma referência aos commits anteriores. Assim, através dessa cadeia de commits, o Git registra um **histórico completo** de todos os commits realizados no repositório.
+
+Caso queira conhecer melhor sobre esse processo, acesse a documentação oficial do Git.
+
+## Adicionando colaboradores no commit
+
+Cada commit possui por padrão um autor, que é a pessoa que realizou aquelas alterações no código.
+Entretanto, quando trabalhamos em equipe pode ser que algum trecho de código seja escrito em dupla ou trio. Assim, como definir a autoria dessas outras pessoas no commit?
+
+O Git oferece a possibilidade de adicionar **mais de um autor** a um commit. Para isso, após escrever a mensagem do commit, pulamos duas linhas e usamos a palavra-chave Co-authored-by:, seguido do nome e e-mail associado ao GitHub (entre < >) de cada pessoa colaboradora.
+
+Cada coautor deve estar em uma linha diferente, como é mostrado no exemplo a seguir:
+
+```text
+$ git commit -m "Adicionar nova funcionalidade.
+>
+>
+Co-authored-by: NOME <nome@email.com>
+Co-authored-by: OUTRO-NOME <outro@email.com>"
+```
+
+## Outras formas de colaborar
+
+Existem diversos projetos de software com seu código fonte disponível no GitHub e abertos para colaboração de qualquer um que queira contribuir. Esse modelo de desenvolvimento é chamado de Open Source ou Código Aberto.
+Caso queira entender mais sobre projetos Open Source, temos aqui na Alura o artigo [Open Source - Uma breve introdução](https://www.alura.com.br/artigos/open-source-uma-breve-introducao), que fala mais sobre o tema.
+
+Em um projeto que segue o modelo Open Source, as demandas, como novos recursos e correção de bugs, são descritas e listadas no repositório do GitHub via issues. Assim, caso você queira colaborar, é possível escolher uma issue.
+
+Você precisará realizar um fork do projeto, que é uma cópia do repositório em sua conta. Assim, você poderá escrever o código que soluciona a issue escolhida.
+
+Por fim, para enviar sua solução de volta ao repositório fonte, você precisará abrir um pull request, que é uma solicitação de pull das suas alterações. Esse pull request passará por um processo de avaliação dos responsáveis pelo projeto, podendo ser aceito ou não.
+
+Caso seja aceito, seu código agora fará parte do código fonte desse projeto.
+
+É importante sempre se atentar às regras de contribuição de cada repositório, que podem variar de acordo com o projeto.
+
+Grandes projetos são Open Source e se encontram no GitHub, como a IDE VS Code e o framework React, do JavaScript. Você pode conferir os repositórios desses projetos nos links abaixo:
+
+- [Repositório do VS Code no Github](https://github.com/microsoft/vscode)
+- [Repositório do React no Github](https://github.com/facebook/react-native)
