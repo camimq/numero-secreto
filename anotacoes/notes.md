@@ -1,5 +1,7 @@
 # Anotações & conteúdos extras
 
+# Aula 2: Colaborando em projetos
+
 ## Para saber mais: repositórios privados
 
 **A visibilidade dos repositórios no GitHub** serve para controlar quem tem acesso a eles.
@@ -144,3 +146,16 @@ Grandes projetos são Open Source e se encontram no GitHub, como a IDE VS Code e
 
 - [Repositório do VS Code no Github](https://github.com/microsoft/vscode)
 - [Repositório do React no Github](https://github.com/facebook/react-native)
+
+# Aula 3: Utilizando Git na IDE
+
+## Cuidados ao mudar o histórico
+
+Nessa aula, exploramos como é possível alterar o histórico de commits no Git, mas é fundamental exercer cautela ao realizar tais mudanças. Como diz o ditado, "com grandes poderes vêm grandes responsabilidades".
+É importante destacar que os comandos do Git que permitem modificar o histórico de commits devem ser utilizados com prudência e apenas quando o commit em questão ainda não foi enviado ao repositório remoto, ou seja, quando ele existe apenas no seu repositório local.
+
+Modificar um commit que já se tornou público, ou seja, aquele que já foi enviado ao GitHub ou a qualquer outro repositório remoto, pode acarretar problemas consideráveis na colaboração com as outras pessoas e na integridade do histórico de um projeto.
+
+Em situações de colaboração em equipe, é essencial manter a integridade do histórico de commits, pois qualquer modificação em um commit que outras pessoas estejam trabalhando pode resultar em conflitos e dificuldades na colaboração.
+
+É recomendável evitar a modificação excessiva do histórico de commits, uma vez que isso pode tornar o histórico confuso. O histórico deve ser uma representação precisa do progresso do projeto ao longo do tempo.
